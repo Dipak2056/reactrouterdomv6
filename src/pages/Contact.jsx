@@ -5,13 +5,9 @@ const Contact = () => {
   let { username } = useParams();
   return (
     <div>
-      Contact for {username}
-      <button
-        onClick={() => {
-          navigate("/about");
-        }}
-      >
-        change to about page
+      Contact for
+      <button onClick={() => navigate("/about")}>
+        change to about page {username}
       </button>
     </div>
   );
