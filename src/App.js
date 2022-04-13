@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
         <Link to="/contact">Contact</Link>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/contact/:username" element={<Contact />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="*" element={<Error />}></Route>
         </Routes>
       </Router>
     </div>
