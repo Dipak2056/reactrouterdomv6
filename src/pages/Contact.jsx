@@ -1,10 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 const Contact = () => {
   let navigate = useNavigate();
+  let { username } = useParams();
   return (
     <div>
-      Contact
+      Contact for {username}
       <button
         onClick={() => {
           navigate("/about");
